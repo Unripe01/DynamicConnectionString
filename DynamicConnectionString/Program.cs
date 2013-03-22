@@ -15,6 +15,11 @@ namespace DynamicConnectionString
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault( false );
+
+			//接続文字列の切り替え
+			Properties.Settings.Default.NewDBConnectionString = 
+				Properties.Settings.Default.NewDBConnectionString.Replace( "dummy", "sa" );
+
 			Application.Run( new Form1() );
 		}
 	}
